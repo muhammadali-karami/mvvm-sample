@@ -1,6 +1,6 @@
 package com.example.architecture.ui.base
 
-import android.app.Activity
+import androidx.fragment.app.FragmentActivity
 
-open class BaseActivity : Activity() {
+open class BaseActivity : FragmentActivity() {
 }

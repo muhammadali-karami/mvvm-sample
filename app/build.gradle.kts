@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -33,7 +34,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     dataBinding.enable = true
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -46,5 +52,10 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("android.arch.lifecycle:extensions:1.1.1")
+    // ViewModel & LiveData
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+
+    // Navigation Component
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 }
