@@ -1,4 +1,4 @@
-package ir.ali.mvvm_sample.repo
+package com.example.architecture.repo
 
 interface RemoteErrorEmitter {
     fun onError(msg: String)
@@ -8,5 +8,5 @@ interface RemoteErrorEmitter {
 enum class ErrorType {
     NETWORK, // IO
     TIMEOUT, // Socket
-    UNKNOWN //Anything else
+    UNKNOWN // Anything else
 }
